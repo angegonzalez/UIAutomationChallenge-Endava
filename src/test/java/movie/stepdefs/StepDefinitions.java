@@ -1,7 +1,7 @@
 package movie.stepdefs;
 
 import actor.pages.ActorPage;
-import common.DriverHook;
+import base.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,9 +10,9 @@ import movie.pages.MoviePage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StepDefinitions extends DriverHook {
+public class StepDefinitions {
 
-    MoviePage moviePage = new MoviePage(driver);
+    MoviePage moviePage = new MoviePage(DriverFactory.getDriver());
     ActorPage actorPage;
 
     String movieName;

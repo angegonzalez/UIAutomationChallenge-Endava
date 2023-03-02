@@ -1,6 +1,6 @@
 package search.stepdefs;
 
-import common.DriverHook;
+import base.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class StepsDefinitions extends DriverHook {
+public class StepsDefinitions {
 
-    SearchPage searchPage = new SearchPage(driver);
+    SearchPage searchPage = new SearchPage(DriverFactory.getDriver());
     String title;
 
 

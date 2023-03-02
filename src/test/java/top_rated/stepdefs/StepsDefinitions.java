@@ -1,6 +1,6 @@
 package top_rated.stepdefs;
 
-import common.DriverHook;
+import base.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StepsDefinitions extends DriverHook {
+public class StepsDefinitions{
 
-    TopRatedPage topRatedPage = new TopRatedPage(driver);
+    TopRatedPage topRatedPage = new TopRatedPage(DriverFactory.getDriver());
     MoviePage moviePage;
     String filter;
 
