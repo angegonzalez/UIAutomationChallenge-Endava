@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /src/test/resources/screenshots
+/src/test/resources/.env
 
 ### IntelliJ IDEA ###
 .idea
