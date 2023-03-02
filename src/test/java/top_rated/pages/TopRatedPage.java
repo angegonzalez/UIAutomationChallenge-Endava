@@ -19,17 +19,15 @@ import java.util.Locale;
 import java.util.Random;
 
 public class TopRatedPage extends BasePage {
-    Logger logger = LogManager.getLogger(TopRatedPage.class);
-    By divFilters = By.xpath("//h2[text()=\"Filters\"]/parent::div");
-    By anchorAction;
-    By btnSearch = By.xpath("//a[contains(text(),\"Search\")]");
-    By lblGenres = By.xpath("//h3[contains(text(),\"Genres\")]");
-    By ddlSortBy = By.xpath("//h3[contains(text(), \"Sort Results By\")]/following-sibling::span");
-    By lblAscending = By.xpath("//li[contains(text(), \"Release Date Ascending\")]");
-    By lblMoviesDates = By.xpath("//div[@class=\"card style_1\"]/div[@class=\"content\"]/p");
-    By htmlTag = By.tagName("html");
-
-    By imgsMoviesFiltered = By.xpath("//div[@class=\"card style_1\"]//a[@class=\"image\"]");
+    private final Logger logger = LogManager.getLogger(TopRatedPage.class);
+    private final By divFilters = By.xpath("//h2[text()=\"Filters\"]/parent::div");
+    private final By btnSearch = By.xpath("//a[contains(text(),\"Search\")]");
+    private final By lblGenres = By.xpath("//h3[contains(text(),\"Genres\")]");
+    private final By ddlSortBy = By.xpath("//h3[contains(text(), \"Sort Results By\")]/following-sibling::span");
+    private final By lblAscending = By.xpath("//li[contains(text(), \"Release Date Ascending\")]");
+    private final By lblMoviesDates = By.xpath("//div[@class=\"card style_1\"]/div[@class=\"content\"]/p");
+    private final By htmlTag = By.tagName("html");
+    private final By imgsMoviesFiltered = By.xpath("//div[@class=\"card style_1\"]//a[@class=\"image\"]");
 
     public TopRatedPage(WebDriver driver) {
         super(driver);
@@ -78,7 +76,7 @@ public class TopRatedPage extends BasePage {
     public TopRatedPage selectGenre(String genre) {
         logger.info("Selecting genre "+genre);
         waitForElementPresent(lblGenres);
-        anchorAction = By.xpath(String.format("//a[contains(text(),\"%s\")]/..", genre));
+        By anchorAction = By.xpath(String.format("//a[contains(text(),\"%s\")]/..", genre));
         waitForElementPresent(anchorAction);
         js.executeScript("arguments[0].click();", mapToElement(anchorAction));
         return this;

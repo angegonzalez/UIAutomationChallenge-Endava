@@ -11,10 +11,10 @@ import java.util.ArrayList;
 
 public class SearchPage extends BasePage {
 
-    Logger logger = LogManager.getLogger(SearchPage.class);
-    By txtSearch = By.xpath("//input[@id=\"inner_search_v4\"]");
-    By btnSearch = By.xpath("//input[@type=\"submit\" and @value=\"Search\"]");
-    By searchResults = By.cssSelector(".card.v4.tight .details a");
+    private final Logger logger = LogManager.getLogger(SearchPage.class);
+    private final By txtSearch = By.xpath("//input[@id=\"inner_search_v4\"]");
+    private final By btnSearch = By.xpath("//input[@type=\"submit\" and @value=\"Search\"]");
+    private final By searchResults = By.cssSelector(".card.v4.tight .details a");
 
     public SearchPage(WebDriver driver) {
         super(driver);

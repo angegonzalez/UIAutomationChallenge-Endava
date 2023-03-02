@@ -8,10 +8,10 @@ import org.openqa.selenium.WebDriver;
 
 public class ActorPage extends BasePage {
 
-    Logger logger = LogManager.getLogger(ActorPage.class);
-    By lblDepartment = By.xpath("//span[contains(text(),\"Department\")]/..");
-    By ddlActing = By.xpath("//a[contains(text(),\"Acting\")]/..");
-    By tblActing = By.xpath("//table[@class=\"card credits\"]");
+    private final Logger logger = LogManager.getLogger(ActorPage.class);
+    private final By lblDepartment = By.xpath("//span[contains(text(),\"Department\")]/..");
+    private final By ddlActing = By.xpath("//a[contains(text(),\"Acting\")]/..");
+    private final By tblActing = By.xpath("//table[@class=\"card credits\"]");
     public ActorPage(WebDriver driver) {
         super(driver);
     }

@@ -13,10 +13,10 @@ import java.util.Random;
 
 public class MoviePage extends BasePage {
 
-    Logger logger = LogManager.getLogger(MoviePage.class);
-    By spanGenres = By.xpath("//span[@class=\"genres\"]");
-    By topBilledCast = By.xpath("//ol[@class=\"people scroller\"]/li[@class=\"card\"]");
-    By titleMovie = By.cssSelector(".title>h2>a");
+    private final Logger logger = LogManager.getLogger(MoviePage.class);
+    private final By spanGenres = By.xpath("//span[@class=\"genres\"]");
+    private final By topBilledCast = By.xpath("//ol[@class=\"people scroller\"]/li[@class=\"card\"]");
+    private final By titleMovie = By.cssSelector(".title>h2>a");
     public MoviePage(WebDriver driver) {
         super(driver);
     }

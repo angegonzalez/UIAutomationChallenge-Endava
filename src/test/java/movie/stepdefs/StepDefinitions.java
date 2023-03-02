@@ -12,8 +12,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class StepDefinitions {
 
-    MoviePage moviePage = new MoviePage(DriverFactory.getDriver());
-    ActorPage actorPage;
+    private final MoviePage moviePage = new MoviePage(DriverFactory.getDriver());
+    private ActorPage actorPage;
 
     String movieName;
 

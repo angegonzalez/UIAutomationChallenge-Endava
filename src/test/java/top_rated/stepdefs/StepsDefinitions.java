@@ -15,9 +15,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class StepsDefinitions{
 
-    TopRatedPage topRatedPage = new TopRatedPage(DriverFactory.getDriver());
-    MoviePage moviePage;
-    String filter;
+    private final TopRatedPage topRatedPage = new TopRatedPage(DriverFactory.getDriver());
+    private MoviePage moviePage;
+    private String filter;
 
     @Given("the user wants to see the top-rated movies")
     public void userWantsToSeeTopRatedMovies() {

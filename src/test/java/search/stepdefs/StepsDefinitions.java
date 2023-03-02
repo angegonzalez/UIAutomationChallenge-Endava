@@ -13,8 +13,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class StepsDefinitions {
 
-    SearchPage searchPage = new SearchPage(DriverFactory.getDriver());
-    String title;
+    private final SearchPage searchPage = new SearchPage(DriverFactory.getDriver());
+    private String title;
 
 
     @Given("the user wants to search for a movie")

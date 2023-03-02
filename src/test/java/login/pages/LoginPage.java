@@ -12,13 +12,13 @@ import java.util.ArrayList;
 
 public class LoginPage extends BasePage {
 
-    Logger logger = LogManager.getLogger(LoginPage.class);
-    By txtUsername = By.xpath("//input[@id='username']");
-    By txtPassword = By.xpath("//input[@id='password']");
-    By btnLogin = By.xpath("//input[@id='login_button']");
-    By lblUsername = By.xpath("//div[@class=\"content_wrapper flex\"]/h2");
-    By errorCard = By.xpath("//div[@class=\"error_status card\"]");
-    By errorMessages = By.xpath("//div[@class=\"carton\"]/div/ul/li");
+    private final Logger logger = LogManager.getLogger(LoginPage.class);
+    private final By txtUsername = By.xpath("//input[@id='username']");
+    private final By txtPassword = By.xpath("//input[@id='password']");
+    private final By btnLogin = By.xpath("//input[@id='login_button']");
+    private final By lblUsername = By.xpath("//div[@class=\"content_wrapper flex\"]/h2");
+    private final By errorCard = By.xpath("//div[@class=\"error_status card\"]");
+    private final By errorMessages = By.xpath("//div[@class=\"carton\"]/div/ul/li");
 
     public LoginPage(WebDriver driver) {
         super(driver);
