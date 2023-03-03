@@ -43,8 +43,8 @@ public class TopRatedPage extends BasePage {
         logger.info("Selecting sorting filter...");
         waitForElementPresent(ddlSortBy);
         mapToElement(ddlSortBy).click();
-        js.executeScript("arguments[0].click();", mapToElement(lblAscending));
-        js.executeScript("arguments[0].click();", mapToElements(btnSearch).get(0));
+        clickElementJS(mapToElement(lblAscending));
+        clickElementJS(mapToElements(btnSearch).get(0));
         return this;
     }
 
@@ -78,14 +78,14 @@ public class TopRatedPage extends BasePage {
         waitForElementPresent(lblGenres);
         By anchorAction = By.xpath(String.format("//a[contains(text(),\"%s\")]/..", genre));
         waitForElementPresent(anchorAction);
-        js.executeScript("arguments[0].click();", mapToElement(anchorAction));
+        clickElementJS(mapToElement(anchorAction));
         return this;
     }
 
     public TopRatedPage clickSearchButton() {
         logger.info("Clicking search button...");
         waitForElementPresent(btnSearch);
-        js.executeScript("arguments[0].click();", mapToElements(btnSearch).get(0));
+        clickElementJS(mapToElements(btnSearch).get(0));
         return this;
     }
 

@@ -34,4 +34,8 @@ public class BasePage {
     public void waitForElementPresent(By locator) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
+
+    public void clickElementJS(WebElement element) {
+        this.js.executeScript("arguments[0].click();", element);
+    }
 }
